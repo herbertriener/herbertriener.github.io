@@ -1,4 +1,4 @@
-// Create the overlay and image elements
+// Create the overlay and SVG elements
 const overlay = document.createElement('div');
 overlay.id = 'loader';
 overlay.style.cssText = `
@@ -14,10 +14,10 @@ overlay.style.cssText = `
     z-index: 999;
 `;
 
-const image = document.createElement('img');
-image.id = 'image';
-image.src = 'https://herbertriener.github.io/web/Logo-GIF.gif';
-image.style.cssText = `
+const svgImage = document.createElement('img');
+svgImage.id = 'svgImage';
+svgImage.src = 'https://cdn.jsdelivr.net/gh/jasminder/flutter_preloader/preload.svg';
+svgImage.style.cssText = `
     max-width: 100%;
     max-height: 100%;
     display: none;
@@ -26,16 +26,16 @@ image.style.cssText = `
     left: 50%;
     transform: translate(-50%, -50%);
 `;
-image.style.display = 'none';
+svgImage.style.display = 'none';
 
 // Append the elements to the body
 document.body.appendChild(overlay);
-document.body.appendChild(image);
+document.body.appendChild(svgImage);
 
-// Function to hide the overlay and display the GIF
+// Function to hide the overlay and display the SVG
 function hideOverlay() {
     overlay.style.display = 'none';
-    image.style.display = 'block';
+    svgImage.style.display = 'block';
 }
 
 // Add an event listener to hide the overlay when all external JS files are loaded
