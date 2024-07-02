@@ -18,8 +18,8 @@ const svgImage = document.createElement('img');
 svgImage.id = 'svgImage';
 svgImage.src = 'https://herbertriener.github.io/web/Logo-GIF.gif';
 svgImage.style.cssText = `
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 20%;
+    max-height: 20%;
     display: none;
     position: absolute;
     top: 50%;
